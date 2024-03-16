@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { FaMinus, FaPlus } from "react-icons/fa";
 
 interface CounterProps {
@@ -5,13 +8,27 @@ interface CounterProps {
 }
 
 const Counter = ({ amount }: CounterProps) => {
+  const [count, setCount] = useState(amount);
+
+  const addToCounter = () => {
+    setCount((amount) => amount + 1);
+  };
+
+  const subtractFromCounter = () => {
+    if (count === 0) {
+      setCount(0);
+    } else {
+      setCount((amount) => amount - 1);
+    }
+  };
+
   return (
     <div>
-      <button>
+      <button onClick={addToCounter}>
         <FaPlus />
       </button>
-      <p>{amount}</p>
-      <button>
+      <p>{count}</p>
+      <button onClick={subtractFromCounter}>
         <FaMinus />
       </button>
     </div>
