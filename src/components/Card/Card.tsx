@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Counter from "../Counter/Counter";
 
 const Card = () => {
   const foodList = [
@@ -27,6 +28,7 @@ const Card = () => {
       food_img: "/x-frango.png",
     },
   ];
+
   return (
     <ul>
       {foodList.map((food) => (
@@ -40,6 +42,7 @@ const Card = () => {
           />
           <p>{food.description}</p>
           <p>{food.price}</p>
+          <Counter amount={0} />
         </li>
       ))}
     </ul>
