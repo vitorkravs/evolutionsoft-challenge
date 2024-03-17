@@ -1,5 +1,7 @@
 "use client";
 
+import "./styles.scss";
+
 import { useState } from "react";
 import { FaMinus, FaPlus } from "react-icons/fa";
 
@@ -23,12 +25,12 @@ const Counter = ({ amount }: CounterProps) => {
   };
 
   return (
-    <div>
-      <button onClick={addToCounter}>
+    <div className="counter">
+      <button onClick={addToCounter} className="counter-btn-add">
         <FaPlus />
       </button>
-      <p>{count}</p>
-      <button onClick={subtractFromCounter}>
+      <p className="count-value">{count}</p>
+      <button onClick={subtractFromCounter} className="counter-btn-subtract">
         <FaMinus />
       </button>
     </div>

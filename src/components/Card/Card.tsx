@@ -1,3 +1,5 @@
+import "./styles.scss";
+
 import Image from "next/image";
 import Counter from "../Counter/Counter";
 
@@ -30,18 +32,19 @@ const Card = () => {
   ];
 
   return (
-    <ul>
+    <ul id="card-list">
       {foodList.map((food) => (
-        <li key={food.id} className={food.title}>
-          <h3>{food.title}</h3>
+        <li key={food.id} className={`${food.title} card-list-item`}>
+          <h3 className="card-list-title">{food.title}</h3>
           <Image
             src={food.food_img}
             alt={food.food_img}
             width={100}
             height={100}
+            className="card-list-img"
           />
-          <p>{food.description}</p>
-          <p>
+          <p className="card-list-description">{food.description}</p>
+          <p className="card-list-price">
             R${""}
             {food.price}
           </p>
