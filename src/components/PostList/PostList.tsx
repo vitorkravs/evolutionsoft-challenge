@@ -29,11 +29,10 @@ interface PostListProps {
 const PostList = ({ data }: PostListProps) => {
   return (
     <div>
+      <h2>Receitas</h2>
       {data.map((receita) => (
         <div key={receita.id}>
           <h3>{receita.receita}</h3>
-          <p>{receita.ingredientes}</p>
-          <p>{receita.modo_preparo}</p>
           <picture>
             <img
               src={receita.link_imagem}
@@ -42,6 +41,8 @@ const PostList = ({ data }: PostListProps) => {
               height={100}
             />
           </picture>
+          <p>{receita.ingredientes}</p>
+          <p>{receita.modo_preparo}</p>
         </div>
       ))}
     </div>
