@@ -32,7 +32,7 @@ const Card = () => {
   return (
     <ul>
       {foodList.map((food) => (
-        <li key={food.id}>
+        <li key={food.id} className={food.title}>
           <h3>{food.title}</h3>
           <Image
             src={food.food_img}
@@ -41,7 +41,10 @@ const Card = () => {
             height={100}
           />
           <p>{food.description}</p>
-          <p>{food.price}</p>
+          <p>
+            R${""}
+            {food.price}
+          </p>
           <Counter amount={0} />
         </li>
       ))}
