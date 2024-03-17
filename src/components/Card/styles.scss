@@ -1,0 +1,57 @@
+@import "../../styles/variables.scss";
+
+#card-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: $color-tree;
+  padding: 1rem 2rem;
+  list-style: none;
+  color: $color-tree;
+
+  .card-list-item {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-four;
+    border-radius: 2rem;
+    gap: 1rem;
+
+    .card-list-title {
+      font-size: 1.8rem;
+    }
+
+    .card-list-img {
+      padding: 0.5rem;
+      border-radius: 2rem;
+      width: 150px;
+      height: 150px;
+    }
+
+    .card-list-description,
+    .card-list-price {
+      text-align: center;
+      padding: 0.5rem 1rem;
+      background-color: $color-tree;
+      border-radius: 2rem;
+      color: black;
+      font-weight: 500;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #card-list {
+    flex-direction: row;
+
+    .card-list-item {
+      .card-list-title {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import "../../styles/variables.scss";
+
+#cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 1rem;
+  background-color: $color-tree;
+  #icon-cart {
+    color: black;
+    font-size: 1.5rem;
+  }
+}

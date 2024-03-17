@@ -1,0 +1,27 @@
+@import "../../styles/variables.scss";
+
+#header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+  background-color: $color-one;
+  color: $color-tree;
+  width: 100%;
+
+  #title-header {
+    font-size: 1.3rem;
+    font-weight: 900;
+  }
+}
+
+@media (min-width: 768px) {
+  #header {
+    padding: 2rem 3rem;
+    #title-header {
+      font-size: 2rem;
+      font-weight: 900;
+    }
+  }
+}
