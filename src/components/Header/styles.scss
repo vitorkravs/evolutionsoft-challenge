@@ -9,10 +9,32 @@
   background-color: $color-one;
   color: $color-tree;
   width: 100%;
+  position: relative;
 
   #title-header {
     font-size: 1.3rem;
     font-weight: 900;
+  }
+
+  .teste {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+
+  #icon {
+    padding: 1rem;
+    background-color: $color-tree;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    #icon-cart {
+      color: black;
+      font-size: 1.5rem;
+    }
   }
 }
 
