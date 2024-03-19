@@ -20,15 +20,15 @@ const Header = ({ message }: HeaderProps) => {
   return (
     <header id="header">
       <h1 id="title-header">{message}</h1>
-      <div id="icon">
+      <div id="icon" onClick={openMenu}>
         {visible ? (
-          <IoMdClose id="icon-cart" onClick={openMenu} />
+          <IoMdClose id="icon-cart" />
         ) : (
-          <IoCartOutline id="icon-cart" onClick={openMenu} />
+          <IoCartOutline id="icon-cart" />
         )}
       </div>
       <div
-        className="teste"
+        className="cart-div-container"
         style={visible ? { display: "block" } : { display: "none" }}
       >
         <Cart />
