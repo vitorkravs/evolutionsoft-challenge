@@ -44,10 +44,6 @@ const Card = () => {
             className="card-list-img"
           />
           <p className="card-list-description">{food.description}</p>
-          <p className="card-list-price">
-            R${""}
-            {food.price}
-          </p>
           <Counter amount={0} />
         </li>
       ))}
